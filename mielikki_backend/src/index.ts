@@ -5,6 +5,11 @@ import morgan from "morgan";
 
 const app=express()
 
+app.set('port',3000||process.env.PORT)
+
+
+
+
 app.use(cors())
 app.use(morgan('dev'))
 app.use(express.static(join(__dirname,'source')))
@@ -16,5 +21,5 @@ app.get('/dowload',(req,res)=>{
 
 
 
-app.listen(4000,()=>console.log('start')
+app.listen(app.get('port'),()=>console.log('start on port',app.get('port'))
 )
