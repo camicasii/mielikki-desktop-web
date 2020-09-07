@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App{
+  display: grid;
+  grid-template: "nav nav nav" 4rem 
+                 "con con con" 2fr 
+                 "foo foo foo" 4rem / 1fr 1fr 1fr
+}
+
+nav{
+  grid-area: nav;
+  background-color: #e67300;
+}
+header{
+  grid-area: con;  
+  background-image: url("https://cdn.pixabay.com/photo/2018/12/06/16/12/bird-3860034_960_720.jpg");  
+  background-size: cover;
+  background-position-y: -8rem;
+  padding: 3rem;
+  
+  
+}
+
+footer.page-footer{
+  grid-area: foo;
+  background-color: #ff9933;
+  min-width: 100vw;
+  padding: 0;  
+}
+footer.page-footer div.footer-copyright{
+height: 100%;
+padding: 0;
+}
+
+div.header-container{
+  display: grid;
+  height: 100%;
+  grid-template:'text text img'1fr
+                 'text text img' 0.5fr
+                 'dow dow dow' 1fr /1fr 1fr 1fr
+                
+}
+
+.col-cami-text{
+grid-area: text;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+div.col-cami-img{
+  grid-area: img;
+}
+
+.col-cami-button{
+  grid-area: dow;
+}
+
+@media only screen and (max-width: 768px) {
+  div.col-cami-img{
+    position: absolute;
+    z-index: -1;
+  }
+  h1{
+    font-size: 3rem;
+  }
+  /*.col-cami-text{
+    grid-column: 1/ 4 ;
+  }*/
+  header{
+    padding: 0;
+  }
+
+  div.header-container{    
+    grid-template:'text text '0.5fr
+                   'text text ' 0.5fr
+                   'dow dow ' 1fr /1fr 1fr
+                  
+  }
+  
+}
+
+
+td.dowload:hover{
+color: aliceblue;
+background-color: darkgreen;
+
+}
+td.dowload{
+  padding:0;
+}
+
+a.dowload{
+  text-decoration:none;
+  padding:0;
+  margin:0;
+  min-width: 100%;
+  color:inherit
+}
