@@ -63,7 +63,9 @@ onClick={(e)=>{
           <td
           onClick={(e)=>{
             //@ts-ignore
-            getUrl(e,process.env.REACT_APP_REPO)}}
+            e.preventDefault()
+              window.open(process.env.REACT_APP_REPO)}}
+
             colSpan={2} className="center dowload">Github</td>
           </tr>          
         </tbody>
